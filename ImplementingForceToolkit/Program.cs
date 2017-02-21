@@ -27,10 +27,9 @@ namespace ImplementingForceToolkit
 
             try
             {
-                auth = RunSample().Result;
+                auth = Authenticate().Result;
 
                 var accounts = GetAccounts().Result;
-
                
                 Console.ReadLine();
             }
@@ -65,7 +64,7 @@ namespace ImplementingForceToolkit
             return acaunts;
         }
 
-        private static async Task<AuthenticationClient> RunSample()
+        private static async Task<AuthenticationClient> Authenticate()
         {
             var auth = new AuthenticationClient();
 
